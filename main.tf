@@ -4,7 +4,7 @@ provider "aws" {
 
 module "ecr" {
     source = "./Modules_ECR"
-    repo_name = "$ {var.environment}-nginx-repo"
+    repo_name = "${var.environment}-nginx-repo"
     scan_on_push = true
 }
 
